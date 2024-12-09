@@ -14,7 +14,7 @@
             <declare name="HoUnProdotto" type="Boolean" array="False" size=""/>
             <declare name="ElencoProdotti" type="Real" array="False" size=""/>
             <declare name="ElencoProvvisorio" type="Real" array="False" size=""/>
-            <assign variable="ElencoProvvisorio" expression="0"/>
+            <assign variable="ElencoProvvisorio" expression="2"/>
             <assign variable="ElencoProdotti" expression="0"/>
             <declare name="Portafoglio" type="Real" array="False" size=""/>
             <output expression="&quot;Hai altri prodotti?&quot;" newline="True"/>
