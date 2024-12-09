@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="prova cassiera"/>
+        <attribute name="authors" value="ITS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-19 01:53:50 "/>
+        <attribute name="created" value="SVRTO0lUUy1QMDk7MjAyNC0xMS0xOTsiMTI6MzE6MjYgIjsxOTAw"/>
+        <attribute name="edited" value="SVRTO0lUUy1QMDk7MjAyNC0xMS0xOTsiMDE6NTM6NTAgIjsyOzIwMDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="HoUnProdotto" type="Boolean" array="False" size=""/>
+            <declare name="ElencoProdotti" type="Real" array="False" size=""/>
+            <declare name="ElencoProvvisorio" type="Real" array="False" size=""/>
+            <assign variable="ElencoProvvisorio" expression="0"/>
+            <assign variable="ElencoProdotti" expression="0"/>
+            <declare name="Portafoglio" type="Real" array="False" size=""/>
+            <output expression="&quot;Hai altri prodotti?&quot;" newline="True"/>
+            <input variable="HoUnProdotto"/>
+            <while expression="HoUnProdotto = true">
+                <output expression="&quot;QuantoCosta&quot;" newline="True"/>
+                <input variable="ElencoProvvisorio"/>
+                <assign variable="ElencoProdotti" expression="ElencoProvvisorio + ElencoProdotti"/>
+                <output expression="&quot;Hai altri prodotti?&quot;" newline="True"/>
+                <input variable="HoUnProdotto"/>
+            </while>
+            <output expression="&quot;Con Quanto Paghi?&quot;" newline="True"/>
+            <input variable="Portafoglio"/>
+            <if expression="Portafoglio &gt; ElencoProdotti">
+                <then>
+                    <output expression="&quot;TiDevoDareResto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="Portafoglio &lt; ElencoProdotti">
+                        <then>
+                            <output expression="&quot;Aggiungere Soldi&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; Ritiro Prodotti&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
