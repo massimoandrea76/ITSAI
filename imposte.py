@@ -13,9 +13,10 @@ else:
     tasse_da_scontare += reddito * PRIMA_ALIQUOTA
 
 # Calcolo seconda aliquota
-if 28000 < reddito <= 50000:
-    tasse_da_scontare += (reddito - 28000) * SECONDA_ALIQUOTA
-elif reddito > 50000:
+if reddito > 28000 :
+    if reddito <= 50000 :
+        tasse_da_scontare += (reddito - 28000) * SECONDA_ALIQUOTA
+else:
     tasse_da_scontare += 22000 * SECONDA_ALIQUOTA 
 
 # Calcolo terza aliquota
